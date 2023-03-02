@@ -7,10 +7,8 @@ interface Props {
 const ActiveNav: React.FC<Props> = (props) => {
 
     const handleActive = ( specialty:string): void => {
-        // const id = e.currentTarget.innerText
         props.setActive(specialty)
 
-        console.log(props.active);
     }
     return (
         <div className="">
