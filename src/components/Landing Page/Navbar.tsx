@@ -24,7 +24,7 @@ const NavBar = () => {
                 <Logo />
             </Link>
 
-            <div className={`fixed z-20 left-0 right-0 bottom-0 bg-off-white md:bg-inherit w-1/2 md:w-auto h-[calc(100vh-9.6833px)] transition-all duration-500 translate-x-[200%] ${hamburgerOpen ? "translate-x-full" : undefined} md:-translate-x-0 md:static md:h-auto`}>
+            <div className={`fixed z-20 left-0 right-0 bottom-0 bg-off-white md:bg-inherit w-1/2 md:w-auto h-[100vh] transition-all duration-500 translate-x-[200%] ${hamburgerOpen ? "translate-x-full" : undefined} md:-translate-x-0 md:static md:h-auto`}>
                 <ul className="font-medium mt-20 md:mt-0 text-lg flex space-y-3 md:space-y-0 flex-col items-center md:flex-row justify-between">
                     <Link to='/calculator' onClick={hamburgerOpen ? onHamburger : undefined} className='hover:text-medium-gray cursor-pointer'>Medical Calculator</Link>
                     <li className='hover:text-medium-gray cursor-pointer lg:ml-8'>Dosing Conversion</li>
