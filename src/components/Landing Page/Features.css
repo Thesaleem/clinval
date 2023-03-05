@@ -1,0 +1,11 @@
+
+.check {
+    display: inline-flex;
+    margin-left: 0px;
+    border-radius: 100px;
+    background-color: #c7e7ff;
+    background-image: url("../../assets/checkmark.svg");
+    background-position: 50% 50%;
+    background-size: 12px;
+    background-repeat: no-repeat;
+}
