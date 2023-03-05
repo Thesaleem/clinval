@@ -1,6 +1,6 @@
 const Testimonials = () => {
     return (
-      <div className="w-[90%]  mt-16 md:mt-24  mx-auto">
+      <div className="w-[90%]  mt-16 md:mt-32 lg:mt-24  mx-auto">
         <p className="text-sm font-semibold text-center text-subhead-blue">
           What people say about us
         </p>

@@ -17,7 +17,7 @@ const Features = () => {
 
                 <ul className="md:text-xl text-justify leading-9 md:pt-7">
                     <li className='pt-3 flex items-start md:pt-5 '>
-                        <div className="check w-[20.22px] h-[19px] mt-[8px] md:mt-0 md:w-[24px] md:h-[24px] "></div>
+                        <div className="check w-[26px] h-[19px] mt-[8px] md:mt-0 md:w-[24px] md:h-[24px] "></div>
                         <p className='ml-3'>
                             Instant, accurate calculations for a
                             range of clinical values
@@ -41,7 +41,7 @@ const Features = () => {
                     </li>
 
                     <li className='pt-3 flex items-start md:pt-5'>
-                        <div className="check w-[20.22px] h-[19px] mt-[8px] md:mt-0 md:w-[24px] md:h-[24px]"></div>
+                        <div className="check w-[26px] h-[19px] mt-[8px] md:mt-0 md:w-[24px] md:h-[24px]"></div>
                         <p className='ml-3'>
                             Compatibility with a range of devices
                             and browsers
@@ -50,10 +50,12 @@ const Features = () => {
    
 
                 </ul>
+
                 <div className="md:w-[40%] h-[550px] mt-4 md:mt-0 md:ml-11 bg-hero-blue rounded-lg relative">
                     <img src={doctor} alt="" className='h-[350px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' />
-                    <div className="w-[300px] h-[315px] hidden md:block bg-white rounded-lg absolute -bottom-8 md:-left-52 xl:-left-32 shadow-custom">
+                    <div className="w-[300px] md:h-[315px] hidden md:block bg-white rounded-lg absolute md:-bottom-20 lg:-bottom-8 md:-left-64 lg:-left-52 xl:-left-32 shadow-custom">
                         <div className="w-[90%] mx-auto">
+                            
                             <div className="flex justify-between items-center">
                                 <p className='text-pry-blue font-bold text-3xl py-6'>clinval</p>
                                 <div className="flex">
@@ -61,8 +63,8 @@ const Features = () => {
                                     <div className="bg-hero-blue h-[10px] w-[10px] ml-2 rounded-[20px]"></div>
                                     <div className="bg-hero-blue h-[10px] w-[10px] ml-2 rounded-[20px]"></div>
                                 </div>
-
                             </div>
+
                             <div className="bg-hero-blue h-[8px] mt-6"></div>
                             <div className="bg-hero-blue h-[8px] w-[60%] mt-6"></div>
                             <div className="bg-hero-blue h-[8px] w-[80%] mt-6"></div>
