@@ -4,7 +4,7 @@ const About = () => {
         <div className="w-[90%] xl:w-[70%] xl:justify-between mt-10 mx-auto flex flex-col xl:flex-row items-center">
 
             <div className="md:w-[430px] xl:w-[375px]">
-                <img className='w-full h-full object-contain' src={image} alt="" />
+                <img className='w-full h-full object-contain' src={image} alt="" loading='lazy' />
             </div>
 
             <div className="xl:w-[40%] md:w-[46%] mt-7 xl:mt-0">
