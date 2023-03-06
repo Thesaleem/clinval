@@ -40,9 +40,9 @@ const NavBar = () => {
                 </Link>
 
                 <div className={`fixed z-20 left-0 right-0 bottom-0 pt-28 md:pt-0 bg-hero-blue md:bg-inherit w-1/2 md:w-auto h-[100vh] transition-all duration-500 translate-x-[200%] ${hamburgerOpen ? "translate-x-full" : undefined} md:-translate-x-0 md:static md:h-auto`}>
-                    <ul className=" relative top-28 font-semibold flex space-y-3 md:space-y-0 flex-col items-center md:flex-row justify-between">
+                    <ul className="  font-semibold flex space-y-3 md:space-y-0 flex-col items-center md:flex-row justify-between">
                         <Link to='/calculator' onClick={hamburgerOpen ? onHamburger : undefined} className='hover:text-medium-gray cursor-pointer'>Medical Calculator</Link>
-                        <li className='hover:text-medium-gray cursor-pointer md:ml-8'>Dosing Conversio</li>
+                        <li className='hover:text-medium-gray cursor-pointer md:ml-8'>Dosing Conversion</li>
                     </ul>
                 </div>
 
