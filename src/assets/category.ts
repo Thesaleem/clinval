@@ -17,7 +17,8 @@ import respirology from './category svg/respirology.svg'
 const category: CalcObj = [
     {
         specialty: 'Cardiology',
-        image: cardiology,
+        image: 'https://cdn-icons-png.flaticon.com/512/508/508735.png',
+        // image: cardiology,
         id: 1,
         calculators: [
             {
@@ -40,7 +41,8 @@ const category: CalcObj = [
     {
         specialty: 'Emergency',
         id: 2,
-        image: emergency,
+        image: 'https://cdn-icons-png.flaticon.com/512/1100/1100349.png',
+        // image: emergency,
         calculators: [
             {
                 id: 2.1,
@@ -67,7 +69,8 @@ const category: CalcObj = [
     {
         specialty: 'Nephrology',
         id: 3,
-        image: nephrology,
+        image: 'https://cdn-icons-png.flaticon.com/512/954/954307.png',
+        // image: nephrology,
         calculators: [
             {
                 id: 3.1,
@@ -84,7 +87,8 @@ const category: CalcObj = [
     {
         specialty: 'Neurology',
         id: 4,
-        image: neurology,
+        image: 'https://cdn-icons-png.flaticon.com/512/2491/2491325.png',
+        // image: neurology,
         calculators: [
             {
                 id: 4.1,
@@ -96,7 +100,8 @@ const category: CalcObj = [
     {
         specialty: 'Paediatrics',
         id: 5,
-        image: pediatrics,
+        image: 'https://cdn-icons-png.flaticon.com/512/3309/3309740.png',
+        // image: pediatrics,
         calculators: [
             {
                 id: 5.1,
@@ -108,7 +113,8 @@ const category: CalcObj = [
     {
         specialty: 'Respirology',
         id: 6,
-        image: respirology,
+        image: 'https://cdn-icons-png.flaticon.com/512/3816/3816985.pnggi',
+        // image: respirology,
         calculators: [
             {
                 id: 6.1,
