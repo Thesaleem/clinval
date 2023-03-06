@@ -113,7 +113,7 @@ const category: CalcObj = [
     {
         specialty: 'Respirology',
         id: 6,
-        image: 'https://cdn-icons-png.flaticon.com/512/3816/3816985.pnggi',
+        image: 'https://cdn-icons-png.flaticon.com/512/3816/3816985.png',
         // image: respirology,
         calculators: [
             {
