@@ -1,9 +1,9 @@
-import cardiology from './category svg/cardiology.svg'
-import emergency from './category svg/accident_and_emergency.svg'
-import nephrology from './category svg/nephrology.svg'
-import neurology from './category svg/neurology.svg'
-import pediatrics from './category svg/pediatrics.svg'
-import respirology from './category svg/respirology.svg'
+import cardiology from './category image/heart.png'
+import emergency from './category image/warning.png'
+import nephrology from './category image/kidney.png'
+import neurology from './category image/brain.png'
+import pediatrics from './category image/child.png'
+import respirology from './category image/lungs.png'
  type CalcObj = {
     specialty: string,
     image: string,
@@ -17,8 +17,7 @@ import respirology from './category svg/respirology.svg'
 const category: CalcObj = [
     {
         specialty: 'Cardiology',
-        image: 'https://cdn-icons-png.flaticon.com/512/508/508735.png',
-        // image: cardiology,
+        image: cardiology,
         id: 1,
         calculators: [
             {
@@ -41,8 +40,7 @@ const category: CalcObj = [
     {
         specialty: 'Emergency',
         id: 2,
-        image: 'https://cdn-icons-png.flaticon.com/512/1100/1100349.png',
-        // image: emergency,
+        image: emergency,
         calculators: [
             {
                 id: 2.1,
@@ -69,8 +67,7 @@ const category: CalcObj = [
     {
         specialty: 'Nephrology',
         id: 3,
-        image: 'https://cdn-icons-png.flaticon.com/512/954/954307.png',
-        // image: nephrology,
+        image: nephrology,
         calculators: [
             {
                 id: 3.1,
@@ -87,8 +84,7 @@ const category: CalcObj = [
     {
         specialty: 'Neurology',
         id: 4,
-        image: 'https://cdn-icons-png.flaticon.com/512/2491/2491325.png',
-        // image: neurology,
+        image: neurology,
         calculators: [
             {
                 id: 4.1,
@@ -100,8 +96,7 @@ const category: CalcObj = [
     {
         specialty: 'Paediatrics',
         id: 5,
-        image: 'https://cdn-icons-png.flaticon.com/512/3309/3309740.png',
-        // image: pediatrics,
+        image: pediatrics,
         calculators: [
             {
                 id: 5.1,
@@ -113,8 +108,7 @@ const category: CalcObj = [
     {
         specialty: 'Respirology',
         id: 6,
-        image: 'https://cdn-icons-png.flaticon.com/512/3816/3816985.png',
-        // image: respirology,
+        image: respirology,
         calculators: [
             {
                 id: 6.1,

@@ -1,5 +1,5 @@
 import {motion} from 'framer-motion'
-import arrowIcon from '../../assets/category svg/icon-arrow-down.svg'
+import arrowIcon from '../../assets/category image/icon-arrow-down.svg'
 import { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom'
 

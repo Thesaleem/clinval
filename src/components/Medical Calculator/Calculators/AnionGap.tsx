@@ -1,5 +1,5 @@
 import { useState, MouseEvent } from "react";
-
+import SectionHeader from "../../UI/SectionHeader";
 
 const AnionGap = () => {
     // const [unit, setUnit] = useState(Array(3).fill(true))
@@ -75,6 +75,7 @@ const AnionGap = () => {
 
     return (
         <div className="w-[90%] md:w-[75%] mt-10 mx-auto pt-3 md:pt-5 ">
+            
             <h2 className="text-2xl md:text-3xl font-medium">Anion Gap</h2>
             <p className="max-w-2xl leading-9 mt-3 text-justify">
                 Anion gap test is used to check the pH balance of the blood. It
