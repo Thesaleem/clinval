@@ -29,7 +29,7 @@ const NavBar = () => {
 
     return (
         <header className='bg-hero-neon sticky top-0 z-10'>
-            <nav className="text-pry-blue flex justify-between items-center pt-7 pb-3 w-[90%] my-0 mx-auto">
+            <nav className="text-pry-blue flex justify-between items-center pt-5 pb-3 w-[90%] my-0 mx-auto">
                 <Link to="/" className=''>
                     <div className="flex items-center">
                         <PharmLogo />
@@ -46,7 +46,7 @@ const NavBar = () => {
                     </ul>
                 </div>
 
-                <div onClick={onHamburger} className={`md:hidden hamburger-menu w-[35px] h-[24px] flex flex-col justify-center cursor-pointer ${hamburgerOpen ? 'fixed z-20 right-4 top-6' : undefined}`}>
+                <div onClick={onHamburger} className={`md:hidden hamburger-menu w-[35px] h-[24px] flex flex-col justify-center cursor-pointer ${hamburgerOpen ? 'fixed z-20 right-6 top-9' : undefined}`}>
                     <div className={`mb-1  w-6 h-[2px] transition-all duration-150 ease-in bg-black ${hamburgerOpen ? 'rotate-45 translate-y-1' : undefined}`}></div>
                     <div className={`w-6 h-[2px] transition-all duration-150 ease-in bg-black ${hamburgerOpen ? 'opacity-0' : undefined}`}></div>
                     <div className={`mt-1 w-6 h-[2px] transition-all duration-150 ease-in bg-black ${hamburgerOpen ? '-rotate-45 -translate-y-2 ' : undefined}`}></div>
