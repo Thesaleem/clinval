@@ -4,7 +4,6 @@ import { useState } from "react";
 
 
 type FormData = {
-    // microorganisms: string[],
     pathlesions:string[],
     major: string[],
     minor: string[]
@@ -36,10 +35,10 @@ const DukeEndo = () => {
         <SectionTitle>Duke Criteria for Infective Endocarditis</SectionTitle>
         <SectionText>
           The duke criteria are a set of clinical criteria set forward for the
-          diagnosis of infective endocarditis. These criteria are based on
+          diagnosis of infective endocarditis (IE). These criteria are based on
           clinical, echocardiographic and biological findings, as well as the
           results of blood cultures and serologies.
-          <p>For diagnosis the requirement is: </p>
+          <p>For diagnosis, the requirement is: </p>
           <ul className="list-disc pl-7">
             <li className="">One or more Pathologic criteria, or</li>
             <li className="">2 major clinical criteria or</li>
@@ -80,10 +79,10 @@ const DukeEndo = () => {
                 Pathological Criteria
               </legend>
               <div className="flex justify-between pt-4 pb-2 items-center">
-                <div className="md:w-[70%] text-justify">
+                <div className="md:w-[70%] md:text-justify">
                   <label
                     htmlFor="microorganisms"
-                    className=" text-sm mb-4 md:mb-0 md:text-base "
+                    className="mb-4 md:mb-0 "
                   >
                     Microorganisms; demonstrated by culture or histologic
                     examination of a vegetation that has embolized, or an
@@ -92,7 +91,7 @@ const DukeEndo = () => {
                 </div>
                 <div className="ml-10">
                   <input
-                    className="scale-[2.3]"
+                    className="md:scale-[2.3] scale-150"
                     type="checkbox"
                     value={"true"}
                     id="microorganisms"
@@ -103,10 +102,10 @@ const DukeEndo = () => {
               </div>
 
               <div className="flex justify-between pt-2 md:pt-4 pb-2 items-center">
-                <div className="md:w-[70%] text-justify">
+                <div className="md:w-[70%] md:text-justify">
                   <label
                     htmlFor="pathlesions"
-                    className=" text-sm mb-4 md:mb-0 md:text-base "
+                    className=" mb-4 md:mb-0 "
                   >
                     Pathologic lesions; vegetation or intracardiac abscess
                     confirmed by histologic examination showing active
@@ -115,7 +114,7 @@ const DukeEndo = () => {
                 </div>
                 <div className="ml-10">
                   <input
-                    className="scale-[2.3]"
+                    className="md:scale-[2.3] scale-150"
                     type="checkbox"
                     value={"true"}
                     id="pathlesions"
@@ -131,17 +130,17 @@ const DukeEndo = () => {
                 Major Criteria
               </legend>
               <div className="flex justify-between pt-4 pb-2 items-center">
-                <div className="md:w-[70%] text-justify">
+                <div className="md:w-[70%] md:text-justify">
                   <label
                     htmlFor="bloodculture"
-                    className=" text-sm mb-4 md:mb-0 md:text-base "
+                    className=" mb-4 md:mb-0 "
                   >
                     Blood culture positive for infective endocarditis
                   </label>
                 </div>
                 <div className="ml-10">
                   <input
-                    className="scale-[2.3]"
+                    className="md:scale-[2.3] scale-150"
                     type="checkbox"
                     id="bloodculture"
                     {...register("major", {})}
@@ -150,10 +149,10 @@ const DukeEndo = () => {
               </div>
 
               <div className="flex md:justify-between pt-2 md:pt-4 pb-2 items-center">
-                <div className="md:w-[70%] text-justify">
+                <div className="md:w-[70%] md:text-justify">
                   <label
                     htmlFor="echo"
-                    className=" text-sm mb-4 md:mb-0 md:text-base "
+                    className=" tmb-4 md:mb-0  "
                   >
                     Echocardiogram or clinical evidence of endocardial
                     involvement
@@ -161,7 +160,7 @@ const DukeEndo = () => {
                 </div>
                 <div className="ml-10">
                   <input
-                    className="scale-[2.3]"
+                    className="md:scale-[2.3] scale-150"
                     type="checkbox"
                     id="echo"
                     {...register("major", {})}
@@ -176,10 +175,10 @@ const DukeEndo = () => {
               </legend>
 
               <div className="flex justify-between pt-4 pb-2 items-center">
-                <div className="md:w-[70%] text-justify">
+                <div className="md:w-[70%] md:text-justify">
                   <label
                     htmlFor="predisposition"
-                    className=" text-sm mb-4 md:mb-0 md:text-base "
+                    className="  mb-4 md:mb-0 "
                   >
                     Predisposition: Predisposing heart condition or injection
                     drug use
@@ -187,7 +186,7 @@ const DukeEndo = () => {
                 </div>
                 <div className="ml-10">
                   <input
-                    className="scale-[2.3]"
+                    className="md:scale-[2.3] scale-150"
                     type="checkbox"
                     id="predisposition"
                     {...register("minor", {})}
@@ -196,17 +195,17 @@ const DukeEndo = () => {
               </div>
 
               <div className="flex justify-between pt-2 md:pt-4 pb-2 items-center">
-                <div className="md:w-[70%] text-justify">
+                <div className="md:w-[70%] md:text-justify">
                   <label
                     htmlFor="fever"
-                    className=" text-sm mb-4 md:mb-0 md:text-base "
+                    className="  mb-4 md:mb-0  "
                   >
                     Fever: Temperature greater than 38°C (100.4°F)
                   </label>
                 </div>
                 <div className="ml-10">
                   <input
-                    className="scale-[2.3]"
+                    className="md:scale-[2.3] scale-150"
                     type="checkbox"
                     id="fever"
                     {...register("minor", {})}
@@ -215,10 +214,10 @@ const DukeEndo = () => {
               </div>
 
               <div className="flex justify-between pt-2 md:pt-4 pb-2 items-center">
-                <div className="md:w-[70%] text-justify">
+                <div className="md:w-[70%] md:text-justify">
                   <label
                     htmlFor="vascular"
-                    className=" text-sm mb-4 md:mb-0 md:text-base "
+                    className="mb-4 md:mb-0  "
                   >
                     Vascular phenomena: Major arterial emboli, septic pulmonary
                     infarcts, mycotic aneurysm, intracranial hemorrhage,
@@ -227,7 +226,7 @@ const DukeEndo = () => {
                 </div>
                 <div className="ml-10">
                   <input
-                    className="scale-[2.3]"
+                    className="md:scale-[2.3] scale-150"
                     type="checkbox"
                     id="vascular"
                     {...register("minor", {})}
@@ -236,10 +235,10 @@ const DukeEndo = () => {
               </div>
 
               <div className="flex justify-between pt-2 md:pt-4 pb-2 items-center">
-                <div className="md:w-[70%] text-justify">
+                <div className="md:w-[70%] md:text-justify">
                   <label
                     htmlFor="immunologic"
-                    className=" text-sm mb-4 md:mb-0 md:text-base "
+                    className=" mb-4 md:mb-0  "
                   >
                     Immunologic phenomena: Glomerulonephritis, Osler nodes, Roth
                     spots, and Rheumatoid factor
@@ -247,7 +246,7 @@ const DukeEndo = () => {
                 </div>
                 <div className="ml-10">
                   <input
-                    className="scale-[2.3]"
+                    className="md:scale-[2.3] scale-150"
                     type="checkbox"
                     id="immunologic"
                     {...register("minor", {})}
@@ -256,10 +255,10 @@ const DukeEndo = () => {
               </div>
 
               <div className="flex justify-between pt-2 md:pt-4 pb-2 items-center">
-                <div className="md:w-[70%] text-justify">
+                <div className="md:w-[70%] md:text-justify">
                   <label
                     htmlFor="microbiologic"
-                    className=" text-sm mb-4 md:mb-0 md:text-base "
+                    className=" mb-4 md:mb-0"
                   >
                     Microbiologic evidence: Positive blood culture but does not
                     meet a major criterion as noted abovea or serologic evidence
@@ -268,7 +267,7 @@ const DukeEndo = () => {
                 </div>
                 <div className="ml-10">
                   <input
-                    className="scale-[2.3]"
+                    className="md:scale-[2.3] scale-150"
                     type="checkbox"
                     id="microbiologic"
                     {...register("minor", {})}
