@@ -23,7 +23,7 @@ const Map = () => {
                 Mean Arterial Pressure
             </SectionTitle>
             <SectionText>
-                Mean Arterial Pressure is the average arterial pressure 
+                Mean Arterial Pressure (MAP) is the average arterial pressure 
                 throughout a cardiac cycle, systole and diastole.  
                 It is influenced by cardiac output and systemic vascular resistance. 
                 Depending on the MAP, patients with abnormal values can be treated with 
