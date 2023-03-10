@@ -30,11 +30,11 @@ const AnionGap = () => {
 
   const formValid = {
     sodium:
-      formData.sodium.match(/^[0-9]\d*$/) && formData.sodium.trim() !== "",
+      formData.sodium.match(/^[0-9]*\.?[0-9]+$/) && formData.sodium.trim() !== "",
     chloride:
-      formData.chloride.match(/^[0-9]\d*$/) && formData.chloride.trim() !== "",
+      formData.chloride.match(/^[0-9]*\.?[0-9]+$/) && formData.chloride.trim() !== "",
     bicarbonate:
-      formData.bicarbonate.match(/^[0-9]\d*$/) &&
+      formData.bicarbonate.match(/^[0-9]*\.?[0-9]+$/) &&
       formData.bicarbonate.trim() !== "",
   };
 
@@ -195,15 +195,15 @@ const AnionGap = () => {
         </form>
 
         {result && formIsValid && (
-            <div className="mt-7">
+            <div className="mt-7 max-w-2xl">
             <h1 className="text-xl md:text-2xl font-medium">
                 Result: {result}mEq/L
             </h1>
             </div>
         )}
 
-        <div className="mt-8 py-10">
-            <p className="font-semibold text-sm md:text-xl text-pry-blue">References</p>
+        <div className="mt-8 py-10 max-w-2xl">
+            <p className="font-semibold text-xl text-pry-blue">References</p>
             <p className="pt-2 hover:underline">
               <a href="https://medlineplus.gov/lab-tests/anion-gap-blood-test/">
               MedLine Plus

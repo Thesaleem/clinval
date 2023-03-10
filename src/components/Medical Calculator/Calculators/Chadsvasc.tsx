@@ -40,9 +40,9 @@ const Chadsvasc = () => {
 
                     <div className="flex justify-between">
 
-                        <label htmlFor="age">Age</label>
+                        <label htmlFor="age" className="font-semibold ">Age</label>
 
-                        <select id='age' {...register("age", { required: true })}>
+                        <select className="font-semibold focus:outline-none" id='age' {...register("age", { required: true })}>
                             <option value="0">{"< 65 years"}</option>
                             <option value="1"> 65 - 74 years</option>
                             <option value="2">{' > 75 years'}</option>
@@ -52,17 +52,17 @@ const Chadsvasc = () => {
 
                     
                     <div className="flex justify-between">
-                        <p>Sex</p>
+                        <p className="font-semibold">Sex</p>
 
 
                         <div className="flex">
                             <div className="ml-4">
-                                <label htmlFor="male" className="mr-3">Male</label>
+                                <label htmlFor="male" className="mr-3 font-semibold ">Male</label>
                                 <input {...register("sex", { required: true })} type="radio" id='male' value="0" />
                             </div>
 
                             <div className="ml-4">
-                                <label htmlFor="female" className="mr-3">Female</label>
+                                <label htmlFor="female" className="mr-3 font-semibold ">Female</label>
                                 <input {...register("sex", { required: true })} type="radio" id='female' value="1" />
                             </div>
                         </div>
@@ -70,17 +70,17 @@ const Chadsvasc = () => {
 
 
                     <div className="flex justify-between">
-                        <p>Congestive Heart Failure History</p>
+                        <p className="font-semibold">Congestive Heart Failure History</p>
 
 
                         <div className="flex">
                             <div className="ml-4">
-                                <label htmlFor="chf-yes"  className="mr-3">Yes</label>
+                                <label htmlFor="chf-yes"  className="mr-3 font-semibold ">Yes</label>
                                 <input {...register("chf", { required: true })} type="radio" id='chf-yes' value="1" />                    
                             </div>
 
                             <div className="ml-4">
-                                <label htmlFor="chf-no"  className="mr-3">No</label>
+                                <label htmlFor="chf-no"  className="mr-3 font-semibold ">No</label>
                                 <input {...register("chf", { required: true })} type="radio" id='chf-no' value=" 0" />
                             </div>
                         </div>
@@ -88,17 +88,17 @@ const Chadsvasc = () => {
 
 
                     <div className="flex justify-between">
-                        <p>Hypertension History</p>
+                        <p className="font-semibold">Hypertension History</p>
 
 
                         <div className="flex">
                             <div className="ml-4">
-                                <label htmlFor="hypertension-yes"  className="mr-3">Yes</label>
+                                <label htmlFor="hypertension-yes"  className="mr-3 font-semibold ">Yes</label>
                                 <input {...register("hypertension", { required: true })} type="radio" id='hypertension-yes' value="1" />
                             </div>
 
                             <div className="ml-4">
-                                <label htmlFor="hypertension-no" className="mr-3">No</label>
+                                <label htmlFor="hypertension-no" className="mr-3 font-semibold ">No</label>
                                 <input {...register("hypertension", { required: true })} type="radio" id='hypertension-no' value=" 0" />
                             </div>
                         </div>
@@ -107,34 +107,34 @@ const Chadsvasc = () => {
 
 
                     <div className="flex justify-between">
-                        <p>Stroke, TIA or Thromboembolism History</p>
+                        <p className="font-semibold">Stroke, TIA or Thromboembolism History</p>
 
 
                         <div className="flex">
                             <div className="ml-4">
-                                <label htmlFor="stroke-yes" className="mr-3">Yes</label>
+                                <label htmlFor="stroke-yes" className="mr-3 font-semibold ">Yes</label>
                                 <input {...register("stroke", { required: true })} type="radio" id='stroke-yes' value="1" />                    
                             </div>
                             
                             <div className="ml-4">
-                                <label htmlFor="stroke-no" className="mr-3">No</label>
+                                <label htmlFor="stroke-no" className="mr-3 font-semibold ">No</label>
                                 <input {...register("stroke", { required: true })} type="radio" id='stroke-no' value="0" />                    
                             </div>
                         </div>
                     </div>
 
                     <div className="flex justify-between">
-                        <p>Vascular Disease History</p>
+                        <p className="font-semibold">Vascular Disease History</p>
 
 
                         <div className="flex">
                             <div className="ml-4">
-                                <label htmlFor="vdd-yes" className="mr-3">Yes</label>
+                                <label htmlFor="vdd-yes" className="mr-3 font-semibold ">Yes</label>
                                 <input {...register("vdd", { required: true })} type="radio" id='vdd-yes' value="1" />
                             </div>
                             
                             <div className="ml-4">
-                                <label htmlFor="vdd-no" className="mr-3">No</label>
+                                <label htmlFor="vdd-no" className="mr-3 font-semibold ">No</label>
                                 <input {...register("vdd", { required: true })} type="radio" id='vdd-no' value=" 0" />
                             </div>
                         </div>
@@ -142,17 +142,17 @@ const Chadsvasc = () => {
 
 
                     <div className="flex justify-between">
-                        <p>Diabetes History</p>
+                        <p className="font-semibold">Diabetes History</p>
 
 
                         <div className="flex">
                             <div className="ml-4">
-                                <label htmlFor="diabetes-yes" className="mr-3">Yes</label>
+                                <label htmlFor="diabetes-yes" className="mr-3 font-semibold ">Yes</label>
                                 <input {...register("diabetes", { required: true })} type="radio" id='diabetes-yes' value="1" />
                             </div>
                             
                             <div className="ml-4">
-                                <label htmlFor="diabetes-no" className="mr-3">No</label>
+                                <label htmlFor="diabetes-no" className="mr-3 font-semibold ">No</label>
                                 <input {...register("diabetes", { required: true })} type="radio" id='diabetes-no' value=" 0" />
                             </div>
                         </div>
@@ -169,7 +169,7 @@ const Chadsvasc = () => {
             </form>
 
             {result  && (
-                <div className="mt-7">
+                <div className="mt-7 max-w-2xl">
                     <h1 className="text-xl md:text-2xl font-medium">
                         Result: {result} point{+result === 0 ? '' : 's'}
                     </h1>
@@ -257,26 +257,26 @@ const Chadsvasc = () => {
                 </tbody>
             </table>
 
-            <div className="mt-8 py-10">
-            <p className="font-semibold text-sm md:text-xl text-pry-blue">References</p>
-            <p className="pt-2">
-                Gažová, Andrea, et al. "Predictive value of CHA2DS2-VASc scores regarding the 
-                risk of stroke and all-cause mortality in patients with atrial fibrillation 
-                (CONSORT compliant)." Medicine 98.31 (2019).
-            </p>
-            <p className="pt-2">
-                Connolly, Stuart J., et al. "Apixaban in patients with atrial fibrillation." 
-                New England Journal of Medicine 364.9 (2011): 806-817.
-            </p>
-            <p className="pt-2">
-                Hindricks, Gerhard, et al. "2020 ESC Guidelines for the diagnosis and management 
-                of atrial fibrillation developed in collaboration with the European Association for 
-                Cardio-Thoracic Surgery (EACTS) The Task Force for the diagnosis and management of 
-                atrial fibrillation of the European Society of Cardiology (ESC) Developed with the 
-                special contribution of the European Heart Rhythm Association (EHRA) of the ESC." 
-                European heart journal 42.5 (2021): 373-498.
-            </p>
-        </div>
+            <div className="mt-8 py-10 max-w-2xl">
+                <p className="font-semibold text-xl text-pry-blue">References</p>
+                <p className="pt-2">
+                    Gažová, Andrea, et al. "Predictive value of CHA2DS2-VASc scores regarding the 
+                    risk of stroke and all-cause mortality in patients with atrial fibrillation 
+                    (CONSORT compliant)." Medicine 98.31 (2019).
+                </p>
+                <p className="pt-2">
+                    Connolly, Stuart J., et al. "Apixaban in patients with atrial fibrillation." 
+                    New England Journal of Medicine 364.9 (2011): 806-817.
+                </p>
+                <p className="pt-2">
+                    Hindricks, Gerhard, et al. "2020 ESC Guidelines for the diagnosis and management 
+                    of atrial fibrillation developed in collaboration with the European Association for 
+                    Cardio-Thoracic Surgery (EACTS) The Task Force for the diagnosis and management of 
+                    atrial fibrillation of the European Society of Cardiology (ESC) Developed with the 
+                    special contribution of the European Heart Rhythm Association (EHRA) of the ESC." 
+                    European heart journal 42.5 (2021): 373-498.
+                </p>
+            </div>
         </Section>
 
   );
