@@ -57,7 +57,7 @@ const Wells = () => {
 
 
                     <div className="flex justify-between">
-                        <p className="font-semibold">Paralysis OR Paresis OR Cast of lower extremity?</p>
+                        <p className="font-semibold">Paralysis or Paresis or recent cast of lower extremity?</p>
 
 
                         <div className="flex">
