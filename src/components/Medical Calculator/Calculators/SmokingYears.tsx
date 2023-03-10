@@ -25,7 +25,7 @@ const SmokingYears = () => {
             </SectionTitle>
             <SectionText>
                 It is used to quantify smoking history. Smoking pack years can give a 
-                doctor or other health care provider an idea of a patient's risk level of developing lung cancer and other lung diseases.
+                doctor or other healthcare providers an idea of a patient's risk level of developing lung cancer and other lung diseases.
             </SectionText>
 
             <form onSubmit={handleSubmit(onSubmit)} className="mt-4 md:w-[70%] xl:w-[50%] ">
