@@ -205,6 +205,10 @@ const AnionGap = () => {
         <div className="mt-8 py-10 max-w-2xl">
             <p className="font-semibold text-xl text-pry-blue">References</p>
             <p className="pt-2 hover:underline">
+              Oh, Man S., and Hugh J. Carroll. "The anion gap." New England Journal of 
+              Medicine 297.15 (1977): 814-817.
+            </p>
+            <p className="pt-2 hover:underline">
               <a href="https://medlineplus.gov/lab-tests/anion-gap-blood-test/">
               MedLine Plus
               </a>
