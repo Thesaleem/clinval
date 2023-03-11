@@ -1,12 +1,21 @@
 import ActiveNav from "../UI/ActiveNav"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Specialty from "./Specialty"
 import category, {sortedCategory} from "../../assets/category"
 import Ordered from "./Ordered"
 
 const Calculator = () => {
-    const [active, setActive] = useState('By Specialty')
+    const [active, setActive] = useState(() => {
+        const storedState = localStorage.getItem('activeNav')
+        return storedState ? storedState : 'By Specialty'
+    })
     const isActive = active === 'By Specialty'
+
+
+    
+    useEffect(() => {
+        localStorage.setItem('activeNav', active)
+    }, [active])
 
     const mapSpecialty = category.map(item => {
         return <Specialty key={item.id} option={item} />
