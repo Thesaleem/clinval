@@ -16,7 +16,9 @@ import SmokingYears from "./components/Medical Calculator/Calculators/SmokingYea
 import Wallace from "./components/Medical Calculator/Calculators/Wallace";
 import WeightEstimate from "./components/Medical Calculator/Calculators/WeightEstimate";
 import Wells from "./components/Medical Calculator/Calculators/Wells";
-
+import Converter from "./components/Medical Calculator/Converter";
+import Opioid from "./components/Medical Calculator/Dose Converter/Opioid";
+import Corticosteroid from "./components/Medical Calculator/Dose Converter/Corticosteroid";
 
 
 const router = createBrowserRouter([
@@ -47,7 +49,11 @@ const router = createBrowserRouter([
       },
       {
         path: "dose-converter",
-        children: [{ index: true, element: "" }],
+        children: [
+          { index: true, element: <Converter /> },
+          {path: 'corticosteroid', element: <Corticosteroid />},
+          {path: 'opioid', element:<Opioid />}
+        ],
       },
     ],
   },

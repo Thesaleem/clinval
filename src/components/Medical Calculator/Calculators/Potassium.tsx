@@ -32,8 +32,8 @@ const Potassium = () => {
         <Section>
             <SectionTitle>Potassium Deficit Calculator</SectionTitle>
             <SectionText>
-                Potassium is the most abundant cation in the ICF, balancing the sodium
-                contained in the ECF and maintaining electroneutrality of bodily
+                Potassium is the most abundant cation in the intracellular fluid (ICF), balancing the sodium
+                contained in the extracellular fluid (ECF) and maintaining electroneutrality of bodily
                 fluids. Potassium regulation is primarily under the control of the
                 kidneys with excess dietary potassium being excreted in the urine.
                 Although mild abnormalities of serum potassium are considered a

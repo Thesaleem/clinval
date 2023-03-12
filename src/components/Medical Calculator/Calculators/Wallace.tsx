@@ -13,7 +13,7 @@ const Wallace = () => {
                 Rule of Nines
             </SectionTitle>
             <SectionText>
-                TThe Rule of Nines also known as the Wallace Rule of Nines, 
+                The Rule of Nines also known as the Wallace Rule of Nines, 
                 is used to asses the total body surface area (TBSA) in burn patients.
                 Measuring TBSA is important to calculate initial fluid requirement 
                 alongside the use of <Link to=''>Parkland Formula</Link>. This tool is only utilized for 
@@ -32,12 +32,12 @@ const Wallace = () => {
                 <div className="">
                     <img src={imageAdult} alt="TBSA for Adults" />
                     <p className="mt-3 font-semibold">Diagram of rule of Nines modifications for adults.</p>
-                    <p  className="mt-2 font-semibold">Image Adapted from <a href="https://calculate.qxmd.com/storage/file-sources/15/ruleOfNines@2x.png" className="hover:text-blue-600 hover:underline">QxMD</a></p>
+                    <p  className="mt-2 text-sm italic">Image Adapted from <a href="https://calculate.qxmd.com/storage/file-sources/15/ruleOfNines@2x.png" className="hover:text-blue-600 hover:underline">QxMD</a></p>
                 </div>
                 <div className="max-w-2xl">
                     <img src={imageChildren} alt="TBSA for Children" />
                     <p className="mt-3 font-semibold">Diagram of rule of Nines modifications for paediatric patients.</p>
-                    <p  className="mt-2 font-semibold">Image Adapted from <a href="https://www.statpearls.com/pictures/getimagecontent//21639" className="hover:text-blue-600 hover:underline">StatPearls</a></p>
+                    <p  className="mt-2 text-sm italic">Image Adapted from <a href="https://www.statpearls.com/pictures/getimagecontent//21639" className="hover:text-blue-600 hover:underline">StatPearls</a></p>
                 </div>
             </div>
 
