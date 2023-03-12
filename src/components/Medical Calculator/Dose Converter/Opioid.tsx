@@ -94,6 +94,7 @@ const Opioid = () => {
                                 <option value="Fentanyl">Fentanyl Patch</option>
                                 <option value="Hydrocodone">Hydrocodone</option>
                                 <option value="Hydromorphone">Hydromorphone</option>
+                                <option value="Tramadol">Tramadol</option>
                                 <option value="Morphine">Morphine</option>
                                 <option value="Oxycodone">Oxycodone</option>
                                 <option value="Oxymorphone">Oxymorphone</option>

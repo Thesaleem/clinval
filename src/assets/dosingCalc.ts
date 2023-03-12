@@ -66,6 +66,10 @@ export const opioidDrugs = [
         value: 0.15
     },
     {
+        drug: 'Tramadol',
+        value: 0.1
+    },
+    {
         drug: "Fentanyl",
         value: 2.4
     },
