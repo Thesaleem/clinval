@@ -45,7 +45,7 @@ const Corticosteroid = () => {
             </SectionTitle>
             <SectionText>
                 This steroid conversion calculator is a tool used to estimate the correct 
-                corticosteroid dosage.  The calculation is based on steroid equivalency i.e. 
+                corticosteroid dosage. The calculation is based on steroid equivalency i.e. 
                 the idea that steroid can be substituted with one another putting into consideration 
                 their potency and duration of action. 
             </SectionText>
