@@ -100,7 +100,7 @@ const Corticosteroid = () => {
                             <p className="ml-2">mg</p>
                         </div>
                         {errors.dose?.message && (
-                        <p role="alert" className='text-[13px] text-[red] md:absolute md:top-14 md:right-[90px] xl:right-[28%]'>{errors.dose?.message}</p>
+                        <p role="alert" className='text-[13px] text-[red] absolute md:top-14 top-12 right-4 md:right-[6rem] lg:right-[7.5rem] xl:right-[28%]'>{errors.dose?.message}</p>
                         )}
                     </div>
 
@@ -153,7 +153,7 @@ const Corticosteroid = () => {
             
             <div className="overflow-x-auto">
 
-                <table className=" text-write mt-6">
+                <table className=" text-write mt-6 ">
                     <caption className="py-4 font-medium text-pry-blue text-start text-xl md:text-2xl">Conversion Table</caption>
                     
                     <thead>
@@ -184,22 +184,22 @@ const Corticosteroid = () => {
                         <tr>
                             <td className="text-center">Methylprednisolone</td>
                             <td className="px-6 py-4 text-center"> 4</td>
-                            <td className="px-6 py-4 text-center">18-36</td>
+                            <td className=" md:px-6 py-4 text-center">18-36</td>
                         </tr>
                         <tr>
                             <td className="text-center">Prednisolone</td>
                             <td className="px-6 py-4 text-center"> 5</td>
-                            <td className="px-6 py-4 text-center">18-36</td>
+                            <td className="px:14 md:px-6 py-4 text-center">18-36</td>
                         </tr>
                         <tr>
                             <td className="text-center">Prednisone</td>
                             <td className="px-6 py-4 text-center">5</td>
-                            <td className="px-6 py-4 text-center">18-36</td>
+                            <td className="px:14 md:px-6 py-4 text-center">18-36</td>
                         </tr>
                         <tr>
                             <td className="text-center">Triamcinolone</td>
                             <td className="px-6 py-4 text-center">4</td>
-                            <td className="px-6 py-4 text-center">18-36</td>
+                            <td className="px:14 md:px-6 py-4 text-center">18-36</td>
                         </tr>
                         <tr>
                             <td colSpan={3} className='text-center font-semibold py-2'>Long Acting</td>
@@ -207,12 +207,12 @@ const Corticosteroid = () => {
                         <tr>
                             <td className="text-center">Betamethasone</td>
                             <td className="px-6 py-4 text-center">0.6 – 0.75</td>
-                            <td className="px-6 py-4 text-center">36-54</td>
+                            <td className="px:14 md:px-6py-4 text-center">36-54</td>
                         </tr>
                         <tr>
                             <td className="text-center">Dexamethasone</td>
                             <td className="px-6 py-4 text-center">0.75</td>
-                            <td className="px-6 py-4 text-center">36-54</td>
+                            <td className="px:14 md:px-6py-4 text-center">36-54</td>
                         </tr>
                     </tbody>
                 </table>

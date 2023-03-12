@@ -86,10 +86,10 @@ const Opioid = () => {
                         className="font-semibold text-sm py-2 md:text-base">
                         Drug (opioid)
                     </label>
-                    <div className="flex items-center xl:w-[60%]">
+                    <div className="flex items-center w-[50%]  xl:w-[60%]">
                     
-                        <div className="">
-                            <select className="focus:outline-none" id='drug' {...register("drug", { required: true } )}>
+                        <div className="w-full md:w-[auto]">
+                            <select className="focus:outline-none w-full md:w-[auto]" id='drug' {...register("drug", { required: true } )}>
                                 <option value="Codeine">Codeine</option>
                                 <option value="Fentanyl">Fentanyl Patch</option>
                                 <option value="Hydrocodone">Hydrocodone</option>
@@ -107,10 +107,10 @@ const Opioid = () => {
                 <div className="flex relative justify-between items-center pt-4 pb-2">
                     <label 
                         htmlFor="dose" 
-                        className="font-semibold text-sm py-2  md:text-base">
+                        className="font-semibold text-sm py-2 w-[40%]  md:text-base">
                         Total Daily Dose of Opioid
                     </label>
-                    <div className="flex items-center w-[50%] md:w-[40%] xl:w-[60%]">
+                    <div className="flex items-center w-[50%] xl:w-[60%]">
                         <input
                             type="text"
                             id="dose"
@@ -127,7 +127,7 @@ const Opioid = () => {
                         <p className="ml-2">{watchDrug === 'Fentanyl' ? 'mcg/hr' : 'mg/day'}</p>
                     </div>
                     {errors.dose?.message && (
-                    <p role="alert" className='text-[13px] text-[red] md:absolute md:top-14 md:right-[90px] xl:right-[28%]'>{errors.dose?.message}</p>
+                    <p role="alert" className='text-[13px] text-[red] absolute md:top-14 top-16 right-4 md:right-[6rem] lg:right-[7.5rem] xl:right-[28%]'>{errors.dose?.message}</p>
                     )}
                 </div>
             </div>
