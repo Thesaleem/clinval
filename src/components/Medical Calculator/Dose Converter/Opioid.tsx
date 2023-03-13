@@ -191,6 +191,10 @@ const Opioid = () => {
                         <td className="px-6 py-4 text-center">1</td>
                     </tr>
                     <tr>
+                        <td className="px-6 text-start">Tramadol</td>
+                        <td className="px-6 py-4 text-center">0.1</td>
+                    </tr>
+                    <tr>
                         <td className=" px-6 text-start">Oxycodone</td>
                         <td className="px-6 py-4 text-center">1.5</td>
                     </tr>
@@ -200,7 +204,7 @@ const Opioid = () => {
                         <td className="px-6 py-4 text-center">3</td>
                     </tr>
                     <tr>
-                        <td className=" px-6 text-start font-semibold" colSpan={3}>Methadone</td>
+                        <td className=" px-6 py-2 text-start font-semibold" colSpan={3}>Methadone</td>
                     </tr>
                     <tr>
                         <td className=" px-6 text-center">1-20 mg/day</td>

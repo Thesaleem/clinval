@@ -7,7 +7,8 @@ type CalcFormat = {
 
 type StateData = {
     drug: string,
-    value: number
+    value: number,
+    type?: string, 
 }[]
 
 const dosingCalc: CalcFormat = [
@@ -17,8 +18,13 @@ const dosingCalc: CalcFormat = [
         url: 'corticosteroid'   
     },
     {
-        calculator: 'Opioid Converter',
+        calculator: 'Diuretics Converter',
         id: 2,
+        url: 'diuretics'
+    },
+    {
+        calculator: 'Opioid Converter',
+        id: 3,
         url: 'opioid'
     },
 ]
@@ -105,5 +111,58 @@ export const opioidDrugs = [
     },
 
 ];
+
+export const diureticsDrugs: StateData = [
+    {
+        drug: "Furosemide Oral",
+        value: 1,
+        type: 'loop'
+    },
+    {
+        drug: "Furosemide IV",
+        value: 2,
+        type: 'loop'
+    },
+    {
+        drug: 'Bumetanide',
+        value: 40,
+        type: 'loop'
+    },
+    {
+        drug: "Torsemide",
+        value: 2,
+        type: 'loop'
+    },
+    {
+        drug: "Hydrochlorothiazide",
+        value: 1,
+        type: 'thiazide'
+    },
+    {
+        drug: "Chlorthalidone",
+        value: 2,
+        type: 'thiazide'
+    },
+    {
+        drug: "Indapamide",
+        value: 10,
+        type: 'thiazide'
+    },
+    {
+        drug: "Chlorothiazide",
+        value: 0.1,
+        type: 'thiazide'
+    },
+    {
+        drug: "Metolazone",
+        value: 10,
+        type: 'thiazide'
+    },
+    {
+        drug: "Bendroflumethiazide",
+        value: 10,
+        type: 'thiazide'
+    },
+]
 
 export default dosingCalc

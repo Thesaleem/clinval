@@ -31,7 +31,6 @@ const WeightEstimate = () => {
         else if (childAge >= 6 && childAge <= 12){
             estimatedWeight = Math.round((3 * childAge) + 7)
         }
-        // console.log(estimatedWeight);
         setResult(estimatedWeight + '')
     }
     return (

@@ -23,7 +23,7 @@ const Corticosteroid = () => {
     const onSubmit:SubmitHandler<FormData> = data => {
         const drugFrom = drugs.find(item => item.drug === data.convertFrom)
         const drugTo = drugs.find(item => item.drug === data.convertTo)
-        const estimatedDose = (drugTo!.value/drugFrom!.value) * +data.dose
+        const estimatedDose = (drugTo!.value / drugFrom!.value) * +data.dose
 
         const checkedDose = (estimatedDose + '').includes('.') ? estimatedDose.toFixed(2) : estimatedDose
         setFrom(data.convertFrom)

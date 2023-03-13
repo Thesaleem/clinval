@@ -19,6 +19,7 @@ import Wells from "./components/Medical Calculator/Calculators/Wells";
 import Converter from "./components/Medical Calculator/Converter";
 import Opioid from "./components/Medical Calculator/Dose Converter/Opioid";
 import Corticosteroid from "./components/Medical Calculator/Dose Converter/Corticosteroid";
+import Diuretics from "./components/Medical Calculator/Dose Converter/Diuretics";
 
 
 const router = createBrowserRouter([
@@ -52,7 +53,8 @@ const router = createBrowserRouter([
         children: [
           { index: true, element: <Converter /> },
           {path: 'corticosteroid', element: <Corticosteroid />},
-          {path: 'opioid', element:<Opioid />}
+          {path: 'opioid', element:<Opioid />},
+          {path: 'diuretics', element:<Diuretics />}
         ],
       },
     ],
