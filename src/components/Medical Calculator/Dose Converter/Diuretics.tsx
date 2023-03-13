@@ -198,10 +198,10 @@ const Corticosteroid = () => {
                         <h1 className="text-xl md:text-2xl font-medium">
                             Estimated dose:
                         </h1>
-                        <div className="flex items-center space-x-6 justify-center md:justify-start">
-                            <p className="md:text-xl font-medium"> {from} {dose} mg</p>
-                            <img src={arrow} className='w-8' alt="" />
-                            <p className="md:text-xl font-medium"> {to} {result} mg</p>
+                        <div className="flex items-center md:space-x-6 justify-between md:justify-start">
+                            <p className="md:text-xl font-medium w-[40%] md:w-auto "> {from} {dose} mg</p>
+                            <img src={arrow} className='w-8 ' alt="" />
+                            <p className="md:text-xl font-medium w-[40%] md:w-auto"> {to} {result} mg</p>
                         </div>
                     </div>
                 )}
