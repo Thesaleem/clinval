@@ -1,6 +1,6 @@
 import Hero from "../Landing Page/Hero";
 import Features from "../Landing Page/Features";
-import Form from "../Landing Page/Form";
+import Form from "../Landing Page/ContactForm";
 import Footer from "../Landing Page/Footer";
 import About from '../Landing Page/About'
 import Testimonials from "../Landing Page/Testimonials";

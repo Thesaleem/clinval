@@ -8,7 +8,7 @@ const Hero = () => {
         navigate('/calculator')
     }
     return (
-        <div className="bg-hero-neon py-10 md:py-16">
+        <div className="bg-hero-neon py-10 md:py-16 hero-section">
             <div className="w-[90%] my-0 mx-auto flex items-center flex-col xl:flex-row xl:justify-between">
                 <div className="xl:w-[60%]">
                     <h1 className="font-semibold text-pry-blue text-3xl md:text-6xl">The Ultimate Medical Calculator for Healthcare Professionals</h1>

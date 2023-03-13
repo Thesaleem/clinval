@@ -54,8 +54,8 @@ const NavBar = () => {
 
                 <div className={`fixed md:hidden z-20 pt-28 bg-hero-blue  top-0 right-0 w-1/2 h-screen transition-all duration-500  ${hamburgerOpen ? "translate-x-0" : 'translate-x-[200%]'}`}>
                     <ul className="font-semibold flex flex-col space-y-3  items-center justify-between">
-                        <Link to='/calculator' className='hover:text-medium-gray cursor-pointer'>Medical Calculator</Link>
-                        <Link to='/dose-converter' className='hover:text-medium-gray cursor-pointer md:ml-8'>Dosing Conversion</Link>
+                        <Link to='/calculator' onClick={ hamburgerOpen ? () => onHamburger() : undefined} className='hover:text-medium-gray cursor-pointer'>Medical Calculator</Link>
+                        <Link to='/dose-converter' onClick={ hamburgerOpen ? () => onHamburger() : undefined}  className='hover:text-medium-gray cursor-pointer md:ml-8'>Dosing Conversion</Link>
                     </ul>
                 </div>
 

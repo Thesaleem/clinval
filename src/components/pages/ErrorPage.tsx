@@ -1,4 +1,4 @@
-import { useRouteError } from "react-router-dom";
+import { useRouteError, useLocation } from "react-router-dom";
 import image from '../../assets/undraw_notfound.png'
 import NavBar from "../Landing Page/Navbar";
 
@@ -8,13 +8,18 @@ type ErrorMsg = {
 }
 
 const ErrorPage = () => {
+    const { message, status } = useLocation().state;
+
     const error = useRouteError() as ErrorMsg
 
     let title = 'An error occured'
-    let message = 'Something went wrong!'
+    let errorMessage = 'Something went wrong!'
 
     if(error.status === 404){
-        message = 'Could  not find Page'
+        errorMessage = 'Could  not find Page'
+    }
+    if(status === 500){
+        errorMessage = message
     }
 
     return (
@@ -25,7 +30,7 @@ const ErrorPage = () => {
                 <div className="">
                     <h1 className="text-8xl">Oops!</h1>
                     <h1 className="py-3 text-2xl">{title}</h1>
-                    <p className="text-2xl"> {message}</p>
+                    <p className="text-2xl"> {errorMessage}</p>
                 </div>
                 <div className="w-[40%] mb-10 lg:mb-0 lg:ml-40">
                     <img src={image} alt="error notice" className="w-full" />

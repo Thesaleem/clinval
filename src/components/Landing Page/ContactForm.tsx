@@ -1,4 +1,7 @@
+import { useEffect } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { Form, redirect, useNavigate } from 'react-router-dom';
+
 
 type FormData = {
     name: string,
@@ -7,11 +10,47 @@ type FormData = {
     profession: string,
     comments: string
 }
-const Form = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm<FormData>();
+const ContactForm = () => {
+    const { register, handleSubmit, watch, reset, formState: { errors, isSubmitSuccessful } } = useForm<FormData>();
     const professionQues = watch('professionQuestion')
-    const submit: SubmitHandler<FormData> = (data) => {
-        console.log(data);
+
+    useEffect(() => {
+        if(isSubmitSuccessful){
+            const element = document.querySelector('.hero-section')
+            element?.scrollIntoView()
+        }
+    }, [isSubmitSuccessful]) //bad practice use refs instead
+
+    const navigate = useNavigate()
+    const submit: SubmitHandler<FormData> = async (data) => {
+        try {
+            const response = await fetch ('https://clinval-387d5-default-rtdb.firebaseio.com/clinval.json', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+
+            
+            if(!response.ok){
+                const errorData = await response.json();
+                console.log(errorData.message, errorData.status);
+                
+                navigate('/error', { state: { message: errorData.message, status: errorData.status } });
+
+            }
+            reset({
+                name: '',
+                email: '',
+                professionQuestion: '',
+                profession: '',
+                comments: '' 
+            })
+        } catch(error){
+            navigate('/error', { state: { message: 'Unable to send feedback', status: 500 } });
+
+        }
     }
 
 
@@ -24,8 +63,8 @@ const Form = () => {
                 <h1 className="font-bold text-pry-blue text-center text-2xl md:text-4xl mt-2">
                     Get in touch if you have a<br /> feedback or contribution
                 </h1>
-                <form
-                action=""
+                <Form
+                method='post'
                 onSubmit={handleSubmit(submit)}
                 className="md:flex flex-col items-center text-write font-semibold text-[15px]"
                 >
@@ -132,10 +171,10 @@ const Form = () => {
                     <button className="mt-5 md:mt-0 w-full md:w-[50%] lg:w-[30%] bg-btn-blue hover:bg-light-blue text-white py-2 px-16 uppercase font-bold">
                         Submit
                     </button>
-                </form>
+                </Form>
             </div>
         </div>
     );
 }
 
-export default Form 
+export default ContactForm 
