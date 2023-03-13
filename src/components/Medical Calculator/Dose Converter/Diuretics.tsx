@@ -223,17 +223,22 @@ const Corticosteroid = () => {
                         </tr>
 
                         <tr  className="">
-                            <td  className="px-6 text-center">Furosemide</td>
+                            <td  className="px-6 text-center">Furosemide Oral</td>
                             <td  className="px-6 py-4 text-center">40</td>
+                        </tr>
+                        
+                        <tr  className="">
+                            <td  className="px-6 text-center">Furosemide IV</td>
+                            <td  className="px-6 py-4 text-center">20</td>
                         </tr>
 
                         <tr  className="">
-                            <td className="px-6 text-center">Bumetanide</td>
+                            <td className="px-6 text-center">Bumetanide (Oral/ IV)</td>
                             <td className="px-6 py-4 text-center">1</td>
                         </tr>
                        
                         <tr  className="">
-                            <td className="px-6 text-center">Torsemide</td>
+                            <td className="px-6 text-center">Torsemide (Oral/ IV)</td>
                             <td className="px-6 py-4 text-center">20</td>
                         </tr>
 
