@@ -149,7 +149,7 @@ const Opioid = () => {
                         Oral Morphine Equivalent:
                     </h1>
                     <div className="flex items-center space-x-6 justify-center md:justify-start">
-                            <p className="md:text-xl font-medium"> {drug} {dose} mg/day</p>
+                            <p className="md:text-xl font-medium"> {drug} {dose} {watchDrug === 'Fentanyl' ? 'mcg/hr' : 'mg/day'}</p>
                             <img src={arrow} className='w-8' alt="" />
                             <p className="md:text-xl font-medium"> Morphine {result} MME/day</p>
                         </div>
