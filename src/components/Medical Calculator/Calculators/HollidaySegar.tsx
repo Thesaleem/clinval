@@ -1,6 +1,7 @@
 import Section, {SectionText, SectionTitle} from "../../UI/Section";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from "react";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 
 type FormData = {
@@ -27,7 +28,10 @@ const HollidaySegar = () => {
         const rate = Math.round(fluidVol / 24)
         setDailyVol(fluidVol + '')
         setFluidRate(rate + '')
-        
+        const analytics = getAnalytics()
+        logEvent(analytics, 'Holliday_Segar_Button', {
+          'name': 'Holliday Segar'
+        })
     }
     return (
         <Section>

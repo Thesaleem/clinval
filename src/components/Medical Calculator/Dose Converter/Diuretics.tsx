@@ -4,6 +4,8 @@ import '../../UI/Table.css'
 import { diureticsDrugs } from "../../../assets/dosingCalc";
 import { useState, useEffect } from "react";
 import arrow from '../../../assets/reuse.png'
+import { getAnalytics, logEvent } from "firebase/analytics";
+
 
 type FormData = {
     type: string,
@@ -58,6 +60,10 @@ const Corticosteroid = () => {
         setTo(convertTo)
         setDose(+dose)
         setResult(answer + '')
+        const analytics = getAnalytics()
+        logEvent(analytics, 'Diuretics_Converter_Button', {
+          'name': 'Diuretics Converter'
+        })
     }    
 
     return (

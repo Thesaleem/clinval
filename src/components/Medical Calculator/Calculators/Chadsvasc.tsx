@@ -1,6 +1,7 @@
 import Section, {SectionText, SectionTitle} from "../../UI/Section";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from "react";
+import { getAnalytics, logEvent } from "firebase/analytics";
 import '../../UI/Table.css'
 
 
@@ -21,6 +22,10 @@ const Chadsvasc = () => {
         const values = Object.values(data)
         const response = values.reduce((acc, cur) => acc + parseInt(cur), 0)
         setResult(response + '')
+        const analytics = getAnalytics()
+        logEvent(analytics, 'Chadsvasc_Button', {
+          'name': 'Chadsvasc'
+        })
     }
   return (
 

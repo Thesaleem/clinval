@@ -17,7 +17,7 @@ const ContactForm = () => {
     useEffect(() => {
         if(isSubmitSuccessful){
             const element = document.querySelector('.hero-section')
-            element?.scrollIntoView()
+            element?.scrollIntoView({behavior: 'smooth'})
         }
     }, [isSubmitSuccessful]) //bad practice use refs instead
 

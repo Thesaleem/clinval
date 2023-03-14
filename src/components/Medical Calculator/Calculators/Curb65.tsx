@@ -1,6 +1,7 @@
 import Section, {SectionText, SectionTitle} from "../../UI/Section";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from "react";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 
 type FormData = {
@@ -19,7 +20,10 @@ const Curb65 = () => {
         const values = Object.values(data)
         const response = values.reduce((acc, cur) => acc + parseInt(cur), 0)
         setResult(response + '')
-        // console.log(data);
+        const analytics = getAnalytics()
+        logEvent(analytics, 'Curb65_Button', {
+          'name': 'Curb65'
+        })
     }
     return (
         <Section>

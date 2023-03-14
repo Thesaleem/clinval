@@ -4,6 +4,7 @@ import '../../UI/Table.css'
 import { drugs } from "../../../assets/dosingCalc";
 import { useState } from "react";
 import arrow from '../../../assets/reuse.png'
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 type FormData = {
     convertFrom: string,
@@ -30,6 +31,10 @@ const Corticosteroid = () => {
         setTo(data.convertTo)
         setDose(+data.dose)
         setResult(checkedDose + '')
+        const analytics = getAnalytics()
+        logEvent(analytics, 'Corticosteroid_Converter_Button', {
+          'name': 'Corticosteroid Converter'
+        })
     }
 
 

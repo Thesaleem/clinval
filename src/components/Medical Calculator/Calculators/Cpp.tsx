@@ -1,6 +1,7 @@
 import Section, {SectionText, SectionTitle} from "../../UI/Section";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from "react";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 
 type FormData = {
@@ -17,6 +18,10 @@ const Cpp = () => {
         const values = Object.values(data)
         const response = Number(values[0])- Number(values[1])
         setResult(response + '')
+        const analytics = getAnalytics()
+        logEvent(analytics, 'Cpp_Button', {
+          'name': 'Cpp'
+        })
     }
     return (
         <Section>

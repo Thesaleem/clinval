@@ -1,6 +1,7 @@
 import Section, {SectionText, SectionTitle} from "../../UI/Section";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from "react";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 type FormData = {
     weight: string,
@@ -26,6 +27,10 @@ const Potassium = () => {
         setTotal(weightValue + deficit)
         setResult(deficit + '')
         setUnit(electrolyteUnit)
+        const analytics = getAnalytics()
+        logEvent(analytics, 'Potassium_Deficit_Calculator_Button', {
+          'name': 'Potassium Deficit'
+        })
     }
 
     return (

@@ -1,6 +1,7 @@
 import Section, {SectionText, SectionTitle} from "../../UI/Section";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from "react";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 
 type FormData = {
@@ -17,6 +18,10 @@ const SmokingYears = () => {
     const onSubmit:SubmitHandler<FormData> = data => {
         const response = Math.round(+data.cigpacks * +data.years)
         setResult(response + '')
+        const analytics = getAnalytics()
+        logEvent(analytics, 'Smoking_Pack_Years_Button', {
+          'name': 'Smoking Pack Years'
+        })
     }
     return (
         <Section>

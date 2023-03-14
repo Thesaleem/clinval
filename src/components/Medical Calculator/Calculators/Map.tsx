@@ -1,6 +1,8 @@
 import Section, {SectionText, SectionTitle} from "../../UI/Section";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from "react";
+import { getAnalytics, logEvent } from "firebase/analytics";
+
 
 
 type FormData = {
@@ -16,6 +18,10 @@ const Map = () => {
     const onSubmit:SubmitHandler<FormData> = data => {
         const response = Math.round(+data.dbp + ((+data.sbp - +data.dbp) / 3))
         setResult(response + '')
+        const analytics = getAnalytics()
+        logEvent(analytics, 'Mean_Arterial_Pressure_Button', {
+          'name': 'Mean Arterial Pressure'
+        })
     }
     return (
         <Section>

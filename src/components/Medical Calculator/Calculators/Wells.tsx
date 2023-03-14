@@ -1,6 +1,8 @@
 import Section, {SectionText, SectionTitle} from "../../UI/Section";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from "react";
+import { getAnalytics, logEvent } from "firebase/analytics";
+
 import '../../UI/Table.css'
 
 
@@ -24,7 +26,10 @@ const Wells = () => {
         const values = Object.values(data)
         const response = values.reduce((acc, cur) => acc + parseInt(cur), 0)
         setResult(response + '')
-        console.log(values);
+        const analytics = getAnalytics()
+        logEvent(analytics, 'Wells_DVT_Button', {
+          'name': 'Wells DVT Criteria'
+        })        
     }
     return (
         <Section>

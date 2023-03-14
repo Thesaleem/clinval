@@ -1,6 +1,7 @@
 import Section, {SectionText, SectionTitle} from "../../UI/Section";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from "react";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 
 type FormData = {
@@ -29,6 +30,10 @@ const DukeEndo = () => {
         else {
             setResult('Rejected')
         }
+        const analytics = getAnalytics()
+        logEvent(analytics, 'Duke_Criteria_Button', {
+          'name': 'Duke Criteria'
+        })
     }
     return (
       <Section>

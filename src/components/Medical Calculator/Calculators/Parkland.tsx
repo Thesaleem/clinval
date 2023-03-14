@@ -1,6 +1,7 @@
 import Section, {SectionText, SectionTitle} from "../../UI/Section";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from "react";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 
 type FormData = {
@@ -20,6 +21,10 @@ const Parkland = () => {
         const weightValue = data.unit === 'lb' ? +data.weight / 2.205 : +data.weight
         const fluidVol = ((weightValue * 4) * +data.tbsa ) / 1000
         setResult(fluidVol + '')
+        const analytics = getAnalytics()
+        logEvent(analytics, 'Parkland_Formula_Button', {
+          'name': 'Parkland Formula'
+        })
     }
 
     return (

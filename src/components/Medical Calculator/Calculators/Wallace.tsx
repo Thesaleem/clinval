@@ -2,11 +2,15 @@ import Section, {SectionText, SectionTitle} from "../../UI/Section";
 import { Link } from "react-router-dom";
 import imageAdult from '../../../assets/ruleOfNinesAdult.png'
 import imageChildren from '../../../assets/ruleOfNinesChildren.png'
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 
 
 const Wallace = () => {
-
+    const analytics = getAnalytics()
+    logEvent(analytics, 'Wallace_Rule_of_Nine', {
+      'name': 'Wallace Rule of Nine'
+    })
     return (
         <Section>
             <SectionTitle>

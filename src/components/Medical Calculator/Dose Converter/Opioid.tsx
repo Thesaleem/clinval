@@ -4,6 +4,8 @@ import '../../UI/Table.css'
 import { opioidDrugs } from "../../../assets/dosingCalc";
 import { useState } from "react";
 import arrow from '../../../assets/reuse.png'
+import { getAnalytics, logEvent } from "firebase/analytics";
+
 
 type FormData = {
     drug: string,
@@ -56,6 +58,10 @@ const Opioid = () => {
         setResult(answer + '')
         setDose(dose)
         setDrug(drug)
+        const analytics = getAnalytics()
+        logEvent(analytics, 'Opioid_Converter_Button', {
+            'name': 'Opioid Converter'
+          }) 
     }
 
     return (

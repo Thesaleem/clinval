@@ -1,17 +1,18 @@
 import { useState, MouseEvent, useEffect } from "react";
 import Section, {SectionText, SectionTitle} from "../../UI/Section";
+import { getAnalytics, logEvent } from "firebase/analytics";
+
+// declare global {
+//   interface Window {
+//     dataLayer: any[];
+//     gtag: (...args: any[]) => void;
+//   }
+// }
+
 
 const AnionGap = () => {
-  // const [unit, setUnit] = useState(Array(3).fill(true))
-
-  // const handleUnitClick = (index: number): void => {
-  //     setUnit(prev => prev.map((unit, i) => i === index ? !unit : true))
-  // }
-  // console.log(unit);
-
 
   const [result, setResult] = useState<number>();
-
 
   const formState = {
     sodium: "",
@@ -63,16 +64,26 @@ const AnionGap = () => {
     });
   };
 
+  // function logCustomEvent(eventName:string, eventData: {[key: string]: string}) {
+  //   window.gtag('event', eventName, eventData);
+  // }
+  
+
   const handleResults = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const resultAG = +formData.sodium - (+formData.chloride + +formData.bicarbonate);
     setResult(resultAG);
+    const analytics = getAnalytics()
+    logEvent(analytics, 'AnionGap_Button_Clicked', {
+      'name': 'AnionGap'
+    })
+    // logCustomEvent('AnionGap_Button_Clicked', {
+    //     'name': 'AnionGap'
+    //   })
   };
 
   let formIsValid =
     formValid.sodium && formValid.chloride && formValid.bicarbonate;
-  console.log(formIsValid);
-
   const errorMsg = (
     <div className="md:absolute md:top-14 md:right-[90px] xl:right-[28%]">
       <p role="alert" className="text-[13px] text-[red]">

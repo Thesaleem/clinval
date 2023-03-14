@@ -1,6 +1,7 @@
 import Section, {SectionText, SectionTitle} from "../../UI/Section";
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from "react";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 type FormData = {
     age: string,
@@ -32,6 +33,10 @@ const WeightEstimate = () => {
             estimatedWeight = Math.round((3 * childAge) + 7)
         }
         setResult(estimatedWeight + '')
+        const analytics = getAnalytics()
+        logEvent(analytics, 'Weight_Estimate_Button', {
+        'name': 'Weight Estimate'
+        })
     }
     return (
         <Section>
