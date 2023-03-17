@@ -148,47 +148,49 @@ const Curb65 = () => {
                 </div>
             )}
 
+            <div className="overflow-x-auto">
+                <table className=" text-write mt-6">
+                    <caption className="py-4 font-medium text-pry-blue text-start text-xl md:text-2xl">Score Interpretation</caption>
+                    
+                    <thead>
+                        <tr  className="">
+                            <th  className=" px-6 py-4"> CURB-65 score</th>
+                            <th  className=" px-6 py-4">Mortality Risk</th>
+                            <th  className=" px-6 py-4">Recommendation per Derivation Study</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr  className="">
+                            <td  className=" text-center">0</td>
+                            <td  className=" px-6 py-4 text-center">0.60%</td>
+                            <td  className=" px-6 py-4 text-center">Low risk, consider home treatment</td>
 
-            <table className=" text-write mt-6">
-                <caption className="py-4 font-medium text-pry-blue text-start text-xl md:text-2xl">Score Interpretation</caption>
-                
-                <thead>
-                    <tr  className="">
-                        <th  className=" px-6 py-4"> CURB-65 score</th>
-                        <th  className=" px-6 py-4">Mortality Risk</th>
-                        <th  className=" px-6 py-4">Recommendation per Derivation Study</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr  className="">
-                        <td  className=" text-center">0</td>
-                        <td  className=" px-6 py-4 text-center">0.60%</td>
-                        <td  className=" px-6 py-4 text-center">Low risk, consider home treatment</td>
+                        </tr>
+                        <tr  className="">
+                            <td className="text-center">1</td>
+                            <td className="px-6 py-4 text-center">2.70%</td>
+                            <td className="px-6 py-4 text-center">Low risk, consider home treatment</td>
+                        </tr>
+                        <tr>
+                            <td className="text-center">2</td>
+                            <td className="px-6 py-4 text-center">6.80%</td>
+                            <td className="px-6 py-4 text-center">Short inpatient hospitalization or closely supervised outpatient treatment</td>
+                        </tr>
+                        <tr>
+                            <td className="text-center">3</td>
+                            <td className="px-6 py-4 text-center">14.0%</td>
+                            <td className="px-6 py-4 text-center">Severe pneumonia, hospitalize and consider admitting to intensive care</td>
+                        </tr>
+                        <tr>
+                            <td className="text-center">4 or 5</td>
+                            <td className="px-6 py-4 text-center"> 27.8%</td>
+                            <td className="px-6 py-4 text-center"> Severe pneumonia, hospitalize and consider admitting to intensive care</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
 
-                    </tr>
-                    <tr  className="">
-                        <td className="text-center">1</td>
-                        <td className="px-6 py-4 text-center">2.70%</td>
-                        <td className="px-6 py-4 text-center">Low risk, consider home treatment</td>
-                    </tr>
-                    <tr>
-                        <td className="text-center">2</td>
-                        <td className="px-6 py-4 text-center">6.80%</td>
-                        <td className="px-6 py-4 text-center">Short inpatient hospitalization or closely supervised outpatient treatment</td>
-                    </tr>
-                    <tr>
-                        <td className="text-center">3</td>
-                        <td className="px-6 py-4 text-center">14.0%</td>
-                        <td className="px-6 py-4 text-center">Severe pneumonia, hospitalize and consider admitting to intensive care</td>
-                    </tr>
-                    <tr>
-                        <td className="text-center">4 or 5</td>
-                        <td className="px-6 py-4 text-center"> 27.8%</td>
-                        <td className="px-6 py-4 text-center"> Severe pneumonia, hospitalize and consider admitting to intensive care</td>
-                    </tr>
-                
-                </tbody>
-            </table>
+            </div>
 
 
             <div className="mt-8 py-10 max-w-2xl">
