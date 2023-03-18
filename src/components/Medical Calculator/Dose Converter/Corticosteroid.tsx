@@ -14,6 +14,11 @@ type FormData = {
 
 
 const Corticosteroid = () => {
+    const analytics = getAnalytics()
+        logEvent(analytics, 'Corticosteroid_Converter_Page_Loaded', {
+          'name': 'Corticosteroid Converter'
+        })
+    
     const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
     const [selectDrugs, setSelectDrugs] = useState(drugs)
     const [from, setFrom] = useState<string>()

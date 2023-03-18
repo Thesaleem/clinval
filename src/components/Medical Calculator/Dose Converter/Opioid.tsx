@@ -36,6 +36,11 @@ const getDoseRange = (dose: number): string => {
 }
 
 const Opioid = () => {
+    const analytics = getAnalytics()
+        logEvent(analytics, 'Opioid_Converter_Page_Loaded', {
+            'name': 'Opioid Converter'
+          }) 
+    
     const { register, handleSubmit, watch, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
     const [result, setResult] = useState<string>()
     const [dose, setDose] = useState('')

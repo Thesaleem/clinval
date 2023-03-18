@@ -20,6 +20,11 @@ type FormData = {
 }
 
 const Wells = () => {
+    const analytics = getAnalytics()
+        logEvent(analytics, 'Wells_DVT_Page_Loaded', {
+          'name': 'Wells DVT Criteria'
+        }) 
+    
     const [result, setResult] = useState<string>('')
     const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
     const onSubmit:SubmitHandler<FormData> = data => {

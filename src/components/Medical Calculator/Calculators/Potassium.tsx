@@ -12,7 +12,11 @@ type FormData = {
 }
 
 const Potassium = () => {
-
+    const analytics = getAnalytics()
+        logEvent(analytics, 'Potassium_Deficit_Calculator_Page_Loaded', {
+          'name': 'Potassium Deficit'
+        })
+    
     const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
     const [result, setResult] = useState<string>('')
     const [unit, setUnit] = useState<string>('')

@@ -13,7 +13,11 @@ type FormData = {
 
 
 const Parkland = () => {
-
+    const analytics = getAnalytics()
+        logEvent(analytics, 'Parkland_Formula_Page_Loaded', {
+          'name': 'Parkland Formula'
+        })
+    
     const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
     const [result, setResult] = useState<string>('')
 

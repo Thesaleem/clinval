@@ -12,6 +12,11 @@ type FormData = {
 }
 
 const Map = () => {
+    const analytics = getAnalytics()
+        logEvent(analytics, 'Mean_Arterial_Pressure_Page_Loaded', {
+          'name': 'Mean Arterial Pressure'
+        })
+    
     const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
     const [result, setResult] = useState<string>('')
 

@@ -14,6 +14,11 @@ type FormData = {
 
 
 const Curb65 = () => {
+    const analytics = getAnalytics()
+        logEvent(analytics, 'Curb65_Page_Loaded', {
+          'name': 'Curb65'
+        })
+    
     const [result, setResult] = useState<string>('')
     const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
     const onSubmit:SubmitHandler<FormData> = data => {

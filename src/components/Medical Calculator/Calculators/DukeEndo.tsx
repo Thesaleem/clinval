@@ -11,6 +11,11 @@ type FormData = {
 }
 
 const DukeEndo = () => {
+  const analytics = getAnalytics()
+        logEvent(analytics, 'Duke_Criteria_Page_Loaded', {
+          'name': 'Duke Criteria'
+        })
+  
     const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
     const [result, setResult] = useState<string>('')
 

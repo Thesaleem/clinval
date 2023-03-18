@@ -12,6 +12,11 @@ type FormData = {
 
 
 const SmokingYears = () => {
+    const analytics = getAnalytics()
+        logEvent(analytics, 'Smoking_Pack_Years_Page_Loaded', {
+          'name': 'Smoking Pack Years'
+        })
+    
     const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
     const [result, setResult] = useState<string>('')
 

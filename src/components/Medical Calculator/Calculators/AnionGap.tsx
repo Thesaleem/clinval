@@ -2,15 +2,13 @@ import { useState, MouseEvent, useEffect } from "react";
 import Section, {SectionText, SectionTitle} from "../../UI/Section";
 import { getAnalytics, logEvent } from "firebase/analytics";
 
-// declare global {
-//   interface Window {
-//     dataLayer: any[];
-//     gtag: (...args: any[]) => void;
-//   }
-// }
-
 
 const AnionGap = () => {
+
+  const analytics = getAnalytics()
+  logEvent(analytics, 'AnionGap_Page_Loaded', {
+    'name': 'AnionGap'
+  })
 
   const [result, setResult] = useState<number>();
 
@@ -63,11 +61,6 @@ const AnionGap = () => {
       };
     });
   };
-
-  // function logCustomEvent(eventName:string, eventData: {[key: string]: string}) {
-  //   window.gtag('event', eventName, eventData);
-  // }
-  
 
   const handleResults = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();

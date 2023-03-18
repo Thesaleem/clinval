@@ -16,6 +16,11 @@ type FormData = {
 }
 
 const Chadsvasc = () => {
+    const analytics = getAnalytics()
+    logEvent(analytics, 'Chadsvasc_Page_Loaded', {
+      'name': 'Chadsvasc'
+    })
+    
     const [result, setResult] = useState<string>('')
     const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
     const onSubmit:SubmitHandler<FormData> = data => {

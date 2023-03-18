@@ -10,6 +10,11 @@ type FormData = {
 }
 
 const HollidaySegar = () => {
+    const analytics = getAnalytics()
+        logEvent(analytics, 'Holliday_Segar_Page_Loaded', {
+          'name': 'Holliday Segar'
+        })
+    
     const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
     const [dailyVol, setDailyVol] = useState<string>('')
     const [fluidRate, setFluidRate] = useState<string>('')

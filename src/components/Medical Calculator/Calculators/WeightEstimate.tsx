@@ -9,6 +9,11 @@ type FormData = {
 }
 
 const WeightEstimate = () => {
+    const analytics = getAnalytics()
+        logEvent(analytics, 'Weight_Estimate_Page_Loaded', {
+        'name': 'Weight Estimate'
+        })
+    
     const { register, handleSubmit, watch, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
     const watchUnit = watch('unit')
     const [result, setResult] = useState<string>('')

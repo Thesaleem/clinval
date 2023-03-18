@@ -22,6 +22,10 @@ type DrugData = {
 
 
 const Corticosteroid = () => {
+    const analytics = getAnalytics()
+        logEvent(analytics, 'Diuretics_Converter_Page_Loaded', {
+          'name': 'Diuretics Converter'
+        })
     const { register, handleSubmit, watch, setValue, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
     const [from, setFrom] = useState<string>()
     const [to, setTo] = useState<string>()
@@ -41,6 +45,8 @@ const Corticosteroid = () => {
     }, [watchType, setValue])
 
     const onSubmit:SubmitHandler<FormData> = data => {
+        
+       
         const {convertFrom, convertTo, dose} = data
         const convertedFromDrug = diureticsDrugs.find(item => item.drug === convertFrom) as DrugData
         const convertedToDrug = diureticsDrugs.find(item => item.drug === convertTo) as DrugData

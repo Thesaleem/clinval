@@ -11,6 +11,11 @@ type FormData = {
 }
 
 const Cpp = () => {
+    const analytics = getAnalytics()
+        logEvent(analytics, 'Cpp_Page_Loaded', {
+          'name': 'Cpp'
+        })
+    
     const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
     const [result, setResult] = useState<string>('')
 
