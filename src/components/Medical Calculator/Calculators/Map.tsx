@@ -38,7 +38,7 @@ const Map = () => {
                 throughout a cardiac cycle, systole and diastole.  
                 It is influenced by cardiac output and systemic vascular resistance. 
                 Depending on the MAP, patients with abnormal values can be treated with 
-                fluids, vasopressors, vasodilators etc.
+                fluids, vasopressors, vasodilators etc. The reference range is 70-100 mmHg.
             </SectionText>
 
             <form onSubmit={handleSubmit(onSubmit)} className="mt-4 md:w-[70%] xl:w-[50%] ">

@@ -1,14 +1,6 @@
 import dosingCalc from "../../assets/dosingCalc"
 import Ordered from "./Ordered"
 
-interface optionProp {
-    option: {
-        id: number,
-        calculator: string,
-        url: string
-    }
-}
-
 
 const Converter = () => {
     

@@ -20,6 +20,8 @@ import Converter from "./components/Medical Calculator/Converter";
 import Opioid from "./components/Medical Calculator/Dose Converter/Opioid";
 import Corticosteroid from "./components/Medical Calculator/Dose Converter/Corticosteroid";
 import Diuretics from "./components/Medical Calculator/Dose Converter/Diuretics";
+import BMI from "./components/Medical Calculator/Calculators/BMI";
+import Apgar from "./components/Medical Calculator/Calculators/Apgar";
 
 
 const router = createBrowserRouter([
@@ -47,6 +49,8 @@ const router = createBrowserRouter([
           { path: "rule-of-nine", element: <Wallace /> },
           { path: "weight-estimation", element: <WeightEstimate /> },
           { path: "wells-criteria", element: <Wells /> },
+          { path: "body-mass-index", element: <BMI /> },
+          { path: "apgar-score", element: <Apgar /> },
         ],
       },
       {

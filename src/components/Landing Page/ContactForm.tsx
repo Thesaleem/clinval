@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { Form, redirect, useNavigate } from 'react-router-dom';
+import { Form, useNavigate } from 'react-router-dom';
 
 
 type FormData = {

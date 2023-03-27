@@ -1,4 +1,4 @@
-import { useState, MouseEvent, useEffect } from "react";
+import { useState, MouseEvent } from "react";
 import Section, {SectionText, SectionTitle} from "../../UI/Section";
 import { getAnalytics, logEvent } from "firebase/analytics";
 

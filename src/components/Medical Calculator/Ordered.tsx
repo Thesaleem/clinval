@@ -1,4 +1,3 @@
-import { type } from "@testing-library/user-event/dist/type"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 const parentVariant = {

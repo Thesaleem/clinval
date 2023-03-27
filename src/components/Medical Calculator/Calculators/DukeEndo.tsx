@@ -16,7 +16,7 @@ const DukeEndo = () => {
           'name': 'Duke Criteria'
         })
   
-    const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
+    const { register, handleSubmit, formState: { isValid } } = useForm<FormData>({mode: 'onChange'});
     const [result, setResult] = useState<string>('')
 
     const onSubmit:SubmitHandler<FormData> = data => {

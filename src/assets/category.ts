@@ -35,6 +35,11 @@ const category: CalcObj = [
                 calculator: 'Mean Arterial Pressure',
                 url: 'mean-arterial-pressure'
             },
+            {
+                id: 1.4,
+                calculator: 'Body Mass Index',
+                url: 'body-mass-index'
+            },
         ]
     },
     {
@@ -102,6 +107,11 @@ const category: CalcObj = [
                 id: 5.1,
                 calculator: 'Weight Estimation',
                 url: 'weight-estimation'
+            },
+            {
+                id: 5.2,
+                calculator: 'Apgar Score',
+                url: 'apgar-score'
             },
         ]
     },

@@ -20,7 +20,7 @@ const Curb65 = () => {
         })
     
     const [result, setResult] = useState<string>('')
-    const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormData>({mode: 'onChange'});
+    const { register, handleSubmit, formState: { isValid } } = useForm<FormData>({mode: 'onChange'});
     const onSubmit:SubmitHandler<FormData> = data => {
         const values = Object.values(data)
         const response = values.reduce((acc, cur) => acc + parseInt(cur), 0)
